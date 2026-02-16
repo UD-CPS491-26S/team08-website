@@ -1,0 +1,358 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.school-logo {
+    height: 50px;
+    width: auto;
+}
+
+.school-logo {
+    cursor: pointer;
+}
+
+.school-name {
+    font-size: 1.8rem;
+    color: #003d82;
+    font-weight: 600;
+}
+
+/* Corporate logo slot (header) */
+.corp-logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.corp-logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.corp-logo-badge {
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corp-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.corp-logo,
+.corp-logo-link {
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .corp-logo {
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .corp-logo-badge {
+        padding: 4px 8px;
+    }
+    .corp-logo {
+        height: 32px;
+    }
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003d82;
+    padding: 0;
+}
+
+.navbar ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    padding: 0 20px;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    background-color: #002856;
+}
+
+.navbar a.active {
+    background-color: #e74c3c;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #003d82 0%, #2980b9 100%);
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Project Section */
+.project-section {
+    margin-bottom: 50px;
+}
+
+.project-section h2 {
+    font-size: 2rem;
+    color: #003d82;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #e74c3c;
+    padding-bottom: 10px;
+}
+
+.section-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.section-content ul {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.section-content li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* Tech Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-item h3 {
+    color: #003d82;
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    color: #666;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    justify-items: center;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 18px 16px 24px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Full-width cover photo (use class "member-photo cover") */
+.member-photo.cover {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Headshot / avatar (use class "member-photo headshot") */
+.member-photo.headshot {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.team-member h3 {
+    color: #003d82;
+    font-size: 1.4rem;
+    margin: 20px 20px 5px 20px;
+}
+
+.member-role {
+    color: #e74c3c;
+    font-weight: 600;
+    margin: 5px 20px;
+    font-size: 0.95rem;
+}
+
+.member-bio {
+    padding: 0 20px 20px 20px;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #003d82;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar a {
+        padding: 12px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .project-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .school-name {
+        font-size: 1.3rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-content {
+        padding: 20px;
+    }
+}
