@@ -5,49 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Team 08 Capstone Project</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/png" href="assets/udayton.png" />
+    <link rel="icon" type="image/png" href="assets/logos/udayton.png" />
+    <script src="scripts/header.js"></script>
   </head>
   <body>
-    <!-- Header -->
-    <header>
-      <div class="header-content">
-        <div class="logo-section">
-          <img
-            src="assets/udayton.png"
-            alt="School Logo"
-            class="school-logo"
-            onclick="window.open('https://udayton.edu', '_blank')"
-          />
-          <h1 class="school-name">University of Dayton</h1>
-        </div>
-        <div class="corp-logo-wrapper">
-          <a
-            href="#"
-            class="corp-logo-link"
-            aria-label="Corporate partner"
-            onclick="
-              window.open('https://www.riversideresearch.org/', '_blank');
-              return false;
-            "
-          >
-            <span class="corp-logo-badge">
-              <img
-                src="assets/riverside-logo.png"
-                alt="Riverside Logo"
-                class="corp-logo"
-              />
-            </span>
-          </a>
-        </div>
-      </div>
-      <!-- Navigation Bar -->
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header" class="header"></div>
 
     <!-- Main Content -->
     <main>
@@ -62,7 +24,7 @@
           <!-- Team Member 1 -->
           <div class="team-member">
             <img
-              src="assets/Erich_Jaster_Cropped.jpg"
+              src="assets/portraits/Erich_Jaster_Cropped.jpg"
               alt="Erich Jastor"
               class="member-photo headshot"
             />
@@ -79,7 +41,7 @@
           <!-- Team Member 2 -->
           <div class="team-member">
             <img
-              src="assets/Jones_Justin_Cropped.jpg"
+              src="assets/portraits/Jones_Justin_Cropped.jpg"
               alt="Justin Jones"
               class="member-photo headshot"
             />
@@ -95,28 +57,102 @@
           <!-- Team Member 3 -->
           <div class="team-member">
             <img
-              src="assets/member3.jpg"
+              src="assets/portraits/Grant_Portrait_cropped_processed_by_imagy.jpg"
               alt="Grant Harvey"
               class="member-photo headshot"
             />
             <h3>Grant Harvey</h3>
             <p class="member-role">Developer</p>
-            <p class="member-bio">Bio</p>
+            <p class="member-bio">
+              Computer Science student with a minor in Music Technology.
+              <br />
+              See more
+              <a
+                href="https://not-spielo.github.io/grant-portfolio/"
+                target="_blank"
+                >here</a
+              >.
+            </p>
           </div>
 
           <!-- Team Member 4 -->
           <div class="team-member">
             <img
-              src="assets/member4.jpg"
+              src="assets/portraits/nguyenq6.jpg"
               alt="Brian Nguyen"
               class="member-photo headshot"
             />
             <h3>Brian Nguyen</h3>
             <p class="member-role">Developer</p>
-            <p class="member-bio">Bio</p>
+            <p class="member-bio">
+              Computer Science student with a focus in AI.
+              <!-- <br />
+              See more
+              <a href="" target="_blank">here</a>. -->
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sponsors Section -->
+      <section class="project-section">
+        <h2>Sponsors</h2>
+        <div class="team-grid">
+          <!-- Sponsor 1 -->
+          <div class="team-member">
+            <img
+              src="assets/portraits/Sponsor-1.jpg"
+              alt="Sponsor 1"
+              class="member-photo headshot"
+            />
+            <h3>Sponsor 1</h3>
+            <p class="member-role">Sponsor</p>
+            <p class="member-bio">
+              Sponsor 1 info.
+              <br />
+              See more
+              <a href="Sponser Site" target="_blank">here</a>.
+            </p>
+          </div>
+
+          <!-- Sponsor 2 -->
+          <div class="team-member">
+            <img
+              src="assets/portraits/Sponsor-2.jpg"
+              alt="Sponsor 2"
+              class="member-photo headshot"
+            />
+            <h3>Sponsor 2</h3>
+            <p class="member-role">Sponsor</p>
+            <p class="member-bio">
+              Sponsor 2 info.
+              <br />
+              See more
+              <a href="Sponser Site" target="_blank">here</a>.
+            </p>
+          </div>
+
+          <!-- Sponsor 3 -->
+          <div class="team-member">
+            <img
+              src="assets/portraits/Sponsor-3.jpg"
+              alt="Sponsor 3"
+              class="member-photo headshot"
+            />
+            <h3>Sponsor 3</h3>
+            <p class="member-role">Sponsor</p>
+            <p class="member-bio">
+              Sponsor 3 info.
+              <br />
+              See more
+              <a href="Sponser Site" target="_blank">here</a>.
+            </p>
           </div>
         </div>
       </section>
     </main>
   </body>
+  <footer>
+    <img src="assets\aerial-view-of-chapel.jpg" alt="School Footer" />
+  </footer>
 </html>
