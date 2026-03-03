@@ -1,29 +1,51 @@
 :root {
-  --dark-blue: #141b4d;
-  --blue: #001082;
-  --pale-blue: #485fff;
-  --light-blue: #d5daff;
-  --grey: #a7b3bf;
-  --light-grey: #e8eef4;
-  --off-white: #f9f9f9;
-  --red: #de0017;
-  --lighter-red: #ff1931;
-  --green: #008b24;
-  --lighter-green: #00be31;
+  --main-color: #141b4d;
+  --secondary-color: #001082;
+  --accent-color: #485fff;
+  --extra-color: #d5daff;
+  --text: #333;
+  --main-grey: #e8eef4;
+  --main-white: #f9f9f9;
+  --main-red: #de0017;
+  --accent-red: #ff1931;
+  --main-green: #008b24;
+  --accent-green: #00be31;
+  --base-1: #fff;
+  --base-2: #000;
+}
+:root.dark-mode {
+  --main-color: #0d1238;
+  --secondary-color: #001082;
+  --accent-color: #485fff;
+  --extra-color: #d5daff;
+  --text: #e6e9f2;
+  --main-grey: #1c1f2e;
+  --main-white: #121420;
+  --main-red: #de0017;
+  --accent-red: #ff1931;
+  --main-green: #008b24;
+  --accent-green: #00be31;
+  --base-1: #1a1d2b;
+  --base-2: #ffffff;
 }
 
 /* General Styles */
 * {
+  overscroll-behavior: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: var(--off-white);
+  background-color: var(--main-white);
+  color: var(--text);
 }
 
 body::-webkit-scrollbar {
@@ -39,7 +61,7 @@ body::-webkit-scrollbar {
 .header-container {
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
   /* z-index: 100; */
-  background-color: var(--dark-blue);
+  background-color: var(--main-color);
 }
 
 .logo-section {
@@ -88,8 +110,9 @@ body::-webkit-scrollbar {
   z-index: 100;
   position: sticky;
   top: 0;
-  background-color: var(--dark-blue);
+  background-color: var(--main-color);
   padding: 0;
+  color: #fff;
 }
 
 .navbar ul {
@@ -100,9 +123,9 @@ body::-webkit-scrollbar {
   padding: 0 20px;
 }
 
-.navbar li {
+/* .navbar li {
   margin: 0;
-}
+} */
 
 .navbar a {
   display: block;
@@ -113,14 +136,28 @@ body::-webkit-scrollbar {
   font-weight: 500;
 }
 .navbar a:hover {
-  background-color: var(--blue);
+  background-color: var(--secondary-color);
 }
 
 .navbar a.active {
-  background-color: var(--red);
+  background-color: var(--main-red);
 }
 .navbar a.active:hover {
-  background-color: var(--lighter-red);
+  background-color: var(--accent-red);
+}
+
+.theme-btn {
+  background: none;
+  color: var(--base-1);
+  padding: 0px 12px;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  margin-left: auto;
+}
+
+.theme-btn:hover {
+  background-color: var(--secondary-color);
 }
 
 /* Main Content */
@@ -134,10 +171,15 @@ main {
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--blue) 100%);
-  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--main-color) 10%,
+    var(--secondary-color) 100%
+  );
+  color: var(--white);
   border-radius: 8px;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .hero h1 {
@@ -157,14 +199,14 @@ main {
 
 .project-section h2 {
   font-size: 2rem;
-  color: var(--blue);
+  color: var(--accent-color);
   margin-bottom: 25px;
-  border-bottom: 3px solid var(--red);
+  border-bottom: 3px solid var(--main-red);
   padding-bottom: 10px;
 }
 
 .section-content {
-  background-color: #fff;
+  background-color: var(--base-1);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -194,24 +236,20 @@ main {
 }
 
 .tech-item {
-  background-color: #f0f4f8;
+  background-color: var(--main-grey);
   padding: 20px;
   border-radius: 8px;
-  border-left: 4px solid var(--lighter-red);
-  transition: transform 0.3s ease;
-}
-
-.tech-item:hover {
+  border-left: 4px solid var(--accent-red);
   transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
-
 .tech-item h3 {
-  color: var(--blue);
+  color: var(--accent-color);
   margin-bottom: 10px;
 }
 
 .tech-item p {
-  color: #666;
+  color: var(--text);
 }
 
 /* Team Grid */
@@ -224,7 +262,7 @@ main {
 }
 
 .team-member {
-  background-color: #fff;
+  background-color: var(--base-1);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -266,13 +304,13 @@ main {
 }
 
 .team-member h3 {
-  color: var(--blue);
+  color: var(--accent-color);
   font-size: 1.4rem;
   margin: 20px 20px 5px 20px;
 }
 
 .member-role {
-  color: var(--lighter-red);
+  color: var(--accent-red);
   font-weight: 600;
   margin: 5px 20px;
   font-size: 0.95rem;
@@ -280,7 +318,7 @@ main {
 
 .member-bio {
   padding: 0 20px 20px 20px;
-  color: #666;
+  color: var(--text);
   font-size: 0.95rem;
   line-height: 1.6;
 }
