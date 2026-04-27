@@ -192,14 +192,6 @@ main {
   opacity: 0.9;
 }
 
-.hero-image img {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
 /* Project Section */
 .project-section {
   margin-bottom: 50px;
