@@ -29,26 +29,28 @@ function initTheme() {
 
   if (!toggleBtn) return;
 
-  // Load saved theme
   const savedTheme = localStorage.getItem("theme");
+  const isDark = savedTheme === "dark";
 
-  if (savedTheme === "dark") {
+  if (isDark) {
     document.documentElement.classList.add("dark-mode");
     toggleBtn.textContent = "☀️";
   } else {
     toggleBtn.textContent = "🌙";
   }
 
-  // Click listener
+  // ✅ FIX: apply correct images on load
+  updateThemeImages(isDark);
+
   toggleBtn.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark-mode");
 
-    const isDark = document.documentElement.classList.contains("dark-mode");
+    const isDarkNow = document.documentElement.classList.contains("dark-mode");
 
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDarkNow ? "dark" : "light");
+    toggleBtn.textContent = isDarkNow ? "☀️" : "🌙";
 
-    updateThemeImages(isDark);
+    updateThemeImages(isDarkNow);
   });
 }
 
