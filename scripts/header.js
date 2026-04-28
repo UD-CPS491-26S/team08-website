@@ -47,5 +47,16 @@ function initTheme() {
 
     localStorage.setItem("theme", isDark ? "dark" : "light");
     toggleBtn.textContent = isDark ? "☀️" : "🌙";
+
+    updateThemeImages(isDark);
+  });
+}
+
+function updateThemeImages(isDark) {
+  const images = document.querySelectorAll(".theme-diagram");
+
+  images.forEach((img) => {
+    const baseName = img.dataset.base; // e.g. Activity-T8
+    img.src = `assets/diagrams/${baseName}-${isDark ? "Dark" : "Light"}.png`;
   });
 }
